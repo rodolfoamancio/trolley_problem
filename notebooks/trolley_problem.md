@@ -134,7 +134,7 @@ df_shared_data_demographics_raw.head(2)
 The dataframe we will use for the analysis is df_shared_data_demographics, it shows the results for the survey. Each line corresponds to a participant response, three possible situations were presented ("Scenario" column) for each possible intervention a person could do:
 
 <p align="center">
-  <img src="../images/switch-loop-footbridge-2.jpg" alt="Possible scenarios"/>
+  <img src="https://dailynous.com/wp-content/uploads/2020/01/switch-loop-footbridge-2.jpg" alt="Possible scenarios"/>
   <br>
   <em> The three scenarios for the trolley problem. Obatined from https://dailynous.com/2020/01/22/learned-70000-responses-trolley-scenarios/ </em>
 </p>
