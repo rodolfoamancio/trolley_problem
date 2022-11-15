@@ -9,7 +9,7 @@ Here is how the story goes. Suppose you are standing next to a lever that can sh
 - Or the opposite, to spare the life of one person at the cost of another five.
 
 <p align="center">
-  <img src="../images/0b0584bf02449513f879837cc95f19e7e0-09-trolley.rhorizontal.w700.webp" alt="The trolley problem"/>
+  <img src="https://pyxis.nymag.com/v1/imgs/08a/3a4/0b0584bf02449513f879837cc95f19e7e0-09-trolley.rhorizontal.w700.jpg" alt="The trolley problem"/>
   <br>
   <em>The trolley problem in its classical variation. Image obtained from: https://nymag.com/intelligencer/2016/08/trolley-problem-meme-tumblr-philosophy.html</em>
 </p>
@@ -130,7 +130,7 @@ The dataframe we will use for the analysis is df_shared_data_demographics, it sh
 <p align="center">
   <img src="../images/switch-loop-footbridge-2.jpg" alt="Possible scenarios"/>
   <br>
-  <em> The three scenarios for the trolley problem. Obatined from Awald et al. (2020) </em>
+  <em> The three scenarios for the trolley problem. Obatined from https://dailynous.com/2020/01/22/learned-70000-responses-trolley-scenarios/ </em>
 </p>
 
 From the image above we can discuss the three situations presented in the survey:
