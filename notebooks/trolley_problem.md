@@ -1,5 +1,11 @@
 # Moral dilemmas, machine learning and misconceptions
 
+Author: Rodolfo Amancio
+
+Find me at: https://rodolfoamancio.github.io
+
+Data published: 2022/11/15
+
 The trolley problem is a classical ethical dilemma with no simple answer. It has been features in multiple pop culture productions such as the movie The Dark Knight or the TV series The Good Place.
 
 Here is how the story goes. Suppose you are standing next to a lever that can shift the path taken by a trolley. Initially the trolley is on a track that will lead it in the direction of five people who cannot escape the incoming thread. If you do nothing these five people will die. However, if you pull the trigger the trolley is lead to a different path and will hit and kill only one person. This begs several questions:
