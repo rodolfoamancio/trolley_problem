@@ -1294,19 +1294,21 @@ logistic_regression_grid_search.fit(
 fig, ax = plt.subplots(figsize=(22, 11))
 
 ax.errorbar(
-    x=logistic_regression_grid_search.cv_results_["param_C"].data,
+    x=0.95*logistic_regression_grid_search.cv_results_["param_C"].data,
     y=logistic_regression_grid_search.cv_results_["mean_train_score"],
     yerr=logistic_regression_grid_search.cv_results_["std_train_score"],
     color=plt.cm.tab10.colors[0],
-    label="Train"
+    label="Train",
+    marker="o"
 )
 
 ax.errorbar(
-    x=logistic_regression_grid_search.cv_results_["param_C"].data,
+    x=1.05*logistic_regression_grid_search.cv_results_["param_C"].data,
     y=logistic_regression_grid_search.cv_results_["mean_test_score"],
     yerr=logistic_regression_grid_search.cv_results_["std_test_score"],
     color=plt.cm.tab10.colors[1],
-    label="Validation"
+    label="Validation",
+    marker="o"
 )
 
 ax.set_ylim(0.7, 0.73)
@@ -1361,19 +1363,21 @@ decision_tree_grid_search.fit(
 fig, ax = plt.subplots(figsize=(22, 11))
 
 ax.errorbar(
-    x=decision_tree_grid_search.cv_results_["param_max_depth"].data,
+    x=decision_tree_grid_search.cv_results_["param_max_depth"].data-0.05,
     y=decision_tree_grid_search.cv_results_["mean_train_score"],
     yerr=decision_tree_grid_search.cv_results_["std_train_score"],
     color=plt.cm.tab10.colors[0],
-    label="Train"
+    label="Train",
+    marker="o"
 )
 
 ax.errorbar(
-    x=decision_tree_grid_search.cv_results_["param_max_depth"].data,
+    x=decision_tree_grid_search.cv_results_["param_max_depth"].data+0.05,
     y=decision_tree_grid_search.cv_results_["mean_test_score"],
     yerr=decision_tree_grid_search.cv_results_["std_test_score"],
     color=plt.cm.tab10.colors[1],
-    label="Validation"
+    label="Validation",
+    marker="o"
 )
 
 #ax.set_ylim(0.7, 0.73)
@@ -1449,19 +1453,21 @@ for i, n_estimators in enumerate(df_random_forest_grid_search_results["n_estimat
     df_aux = df_random_forest_grid_search_results.query(f"n_estimators == {n_estimators}")
 
     ax[i].errorbar(
-        x=df_aux["max_depth"],
+        x=df_aux["max_depth"]-0.1,
         y=df_aux["mean_train_score"],
         yerr=df_aux["std_train_score"],
         color=plt.cm.tab10.colors[0],
-        label="Train"
+        label="Train",
+        marker="o"
     )
 
     ax[i].errorbar(
-        x=df_aux["max_depth"],
+        x=df_aux["max_depth"]+0.1,
         y=df_aux["mean_test_score"],
         yerr=df_aux["std_test_score"],
         color=plt.cm.tab10.colors[1],
-        label="Test"
+        label="Test",
+        marker="o"
     )
     ax[i].set_ylim(0.5, 0.80)
     ax[i].set_xlabel("Max depth", fontsize=14)
@@ -1476,6 +1482,8 @@ for i, n_estimators in enumerate(df_random_forest_grid_search_results["n_estimat
 ![png](trolley_problem_files/trolley_problem_66_0.png)
     
 
+
+The images above display the grid search results for the hyperparameter tuning on the three evaluated algorithms. The best model, chosen for each case, was based on the best AUC performance on the test data from the cross-validation.
 
 ### 4.3 - Model comparison
 
@@ -1568,9 +1576,11 @@ ax.legend(fontsize=12);
 
 
     
-![png](trolley_problem_files/trolley_problem_73_0.png)
+![png](trolley_problem_files/trolley_problem_74_0.png)
     
 
+
+Overall, the immediate the evaluation of the ROC curves shows very similar results for the three models. The decision tree model shows a discontinuous behavior probably based on its innate structure. The Logistic Regression seems a little superior to the Random Forest. More metrics, and statistics for it, can lead to a better understanding.
 
 #### 4.3.2 - Other metrics
 
@@ -1694,7 +1704,7 @@ for i, metric in enumerate(["auc", "precision", "recall", "f1"]):
 
 
     
-![png](trolley_problem_files/trolley_problem_77_0.png)
+![png](trolley_problem_files/trolley_problem_79_0.png)
     
 
 
